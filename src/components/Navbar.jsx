@@ -1,21 +1,47 @@
-import Link from "next/link"
+"use client";
 
-const Navbar = () => { 
+import Link from "next/link";
+import { useState } from "react";
+import { RiMenuLine } from "react-icons/ri";
+import { AiOutlineClose } from "react-icons/ai";
+
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
-    <header>
-      <nav className="p-5 shadow sm:flex sm:items-center sm:justify-between">
+    <header className="shadow w-full text-white">
+      <nav className="sm:flex p-5 items-center justify-between bg-zinc-800">
         <div className="text-2xl">
           Chris
-          <span></span>
+          <span
+            className="text-3xl absolute right-8 cursor-pointer sm:hidden"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            {open ? <AiOutlineClose /> : <RiMenuLine />}
+          </span>
         </div>
-        <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3 z-[-1] sm:z-auto sm:static absolute bg-green-200 w-full sm:w-auto left-0 sm:py-0 py-4 sm:pl-0 opacity-0 sm:opacity-100">
-          <Link href={'/'} className="hover:text-cyan-300 duration-500 my-6 sm:my-0 text-xl m-auto">Home</Link>
-          <Link href={'/'} className="hover:text-cyan-300 duration-500 my-6 sm:my-0 text-xl m-auto">About Me</Link>
-          <Link href={'/'} className="hover:text-cyan-300 duration-500 my-6 sm:my-0 text-xl m-auto">Contact</Link>
-        </div>
+        <ul className={`sm:flex sm:items-center sm:gap-6 absolute sm:static bg-zinc-800 left-0 w-full sm:w-auto sm:pl-0 pl-5 transition-all duration-500 ease-in ${!open && 'hidden'}`}>
+          <li className="my-7 sm:my-0">
+            <Link href={"/"} className="hover:text-cyan-400 duration-500">
+              Home
+            </Link>
+          </li>
+          <li className="my-7 sm:my-0">
+            <Link href={"/"} className="hover:text-cyan-400 duration-500">
+              About Me
+            </Link>
+          </li>
+          <li className="my-7 sm:my-0">
+            <Link href={"/"} className="hover:text-cyan-400 duration-500">
+              Contact
+            </Link>
+          </li>
+        </ul>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
