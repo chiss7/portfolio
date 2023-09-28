@@ -7,6 +7,11 @@ import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const links = [
+    { name: "Home", path: "/" },
+    { name: "About Me", path: "/" },
+    { name: "Contact", path: "/" },
+  ];
 
   return (
     <header className="shadow w-full text-white">
@@ -22,22 +27,16 @@ const Navbar = () => {
             {open ? <AiOutlineClose /> : <RiMenuLine />}
           </span>
         </div>
-        <ul className={`sm:flex sm:items-center sm:gap-6 absolute sm:static bg-zinc-800 left-0 w-full sm:w-auto sm:pl-0 pl-5 transition-all duration-500 ease-in ${!open && 'hidden'}`}>
-          <li className="my-7 sm:my-0">
-            <Link href={"/"} className="hover:text-cyan-400 duration-500">
-              Home
-            </Link>
-          </li>
-          <li className="my-7 sm:my-0">
-            <Link href={"/"} className="hover:text-cyan-400 duration-500">
-              About Me
-            </Link>
-          </li>
-          <li className="my-7 sm:my-0">
-            <Link href={"/"} className="hover:text-cyan-400 duration-500">
-              Contact
-            </Link>
-          </li>
+        <ul
+          className={`sm:flex sm:items-center sm:gap-6 absolute sm:static bg-zinc-800 left-0 w-full sm:w-auto sm:pl-0 pl-5 transition-all duration-500 ease-in ${
+            !open && "hidden"
+          }`}
+        >
+          {links.map((link) => (
+            <li key={link.name} className="my-7 sm:my-0">
+              <Link href={link.path} className="hover:text-cyan-400 duration-500">{link.name}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
