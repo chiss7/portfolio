@@ -14,7 +14,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="shadow w-full text-white">
+    <header className="shadow w-full text-white sticky">
       <nav className="sm:flex p-5 items-center justify-between bg-zinc-800">
         <div className="text-2xl">
           Chris
@@ -28,13 +28,18 @@ const Navbar = () => {
           </span>
         </div>
         <ul
-          className={`sm:flex sm:items-center sm:gap-6 absolute sm:static bg-zinc-800 left-0 w-full sm:w-auto sm:pl-0 pl-5 transition-all duration-500 ease-in ${
-            !open && "hidden"
+          className={`sm:flex sm:items-center sm:gap-6 absolute sm:static bg-zinc-800 sm:z-auto z-[-1] left-0 w-full sm:w-auto sm:pl-0 pl-5 transition-all duration-500 ease-in ${
+            open ? "top-16" : "top-[-150px]"
           }`}
         >
           {links.map((link) => (
             <li key={link.name} className="my-7 sm:my-0">
-              <Link href={link.path} className="hover:text-cyan-400 duration-500">{link.name}</Link>
+              <Link
+                href={link.path}
+                className="hover:text-cyan-400 duration-500"
+              >
+                {link.name}
+              </Link>
             </li>
           ))}
         </ul>
