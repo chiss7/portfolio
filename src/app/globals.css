@@ -2,3 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.section-container {
+  @apply flex flex-col items-center justify-center py-4 md:py-7 lg:py-20 xl:py-32;
+}
+
+.responsive {
+  @apply px-5 sm:px-0 w-full sm:w-2/3 lg:w-3/4 xl:w-2/3 2xl:w-1/2;
+}

@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <section className="flex flex-col items-center justify-center py-4 md:py-7 lg:py-20 xl:py-32">
-      <article className="flex flex-col-reverse gap-6 xl:gap-16 items-center lg:flex-row lg:justify-center px-5 sm:px-0 w-full sm:w-2/3 lg:w-3/4 xl:w-2/3 2xl:w-1/2">
+    <section className="section-container">
+      <article className="flex flex-col-reverse gap-6 xl:gap-16 items-center lg:flex-row lg:justify-center responsive">
         <div className="text-center lg:text-left sm:w-3/4 lg:w-full lg:pr-10">
           <h1 className="text-4xl sm:text-6xl font-bold">
             Hi, I&apos;m Christopher Trujillo

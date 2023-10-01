@@ -26,8 +26,8 @@ import { TbBrandVscode } from "react-icons/tb";
 
 const TechStack = () => {
   return (
-    <section className="flex flex-col items-center justify-center py-4 md:py-7 lg:py-20 xl:py-32">
-      <article className="flex flex-col gap-6 items-center px-5 sm:px-0 w-full sm:w-2/3 lg:w-3/4 xl:w-2/3 2xl:w-1/2">
+    <section className="section-container">
+      <article className="flex flex-col gap-6 items-center responsive">
         <h1 className="text-3xl font-semibold">Tech Stack</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-7 w-full">
           <div className="md:col-span-2 shadow-xl p-4 text-center transition duration-300 hover:-translate-y-1 hover:scale-105">
