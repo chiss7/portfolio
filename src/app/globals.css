@@ -21,3 +21,13 @@ body {
 .responsive {
   @apply px-5 sm:px-0 w-full sm:w-2/3 lg:w-3/4 xl:w-2/3 2xl:w-1/2;
 }
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
