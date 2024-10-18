@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { BsXLg } from "react-icons/bs";
+import { Button } from "./Button";
 
 const links = [
   {
@@ -31,7 +32,6 @@ function Navbar() {
   return (
     <header className="py-8 xl:py-12 text-white">
       <div className="container  mx-auto flex justify-between items-center flex-wrap">
-
         {/* logo */}
         <h1 className="text-4xl font-semibold text-teal-400">Chris</h1>
 
@@ -50,7 +50,9 @@ function Navbar() {
               );
             })}
           </nav>
-          <a href="#contact">Hire me</a>
+          <Button variant={"outline"} size={"md"} onClick={() => window.location.href = '#contact'}>
+            Hire me
+          </Button>
         </div>
 
         {/* mobile nav */}
@@ -59,14 +61,15 @@ function Navbar() {
             className="cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {!isMenuOpen ? <CiMenuFries className="text-[32px] text-teal-400" /> : <BsXLg className="text-[32px] text-teal-400" /> }
-            
+            {!isMenuOpen ? (
+              <CiMenuFries className="text-[32px] text-teal-400" />
+            ) : (
+              <BsXLg className="text-[32px] text-teal-400" />
+            )}
           </i>
         </div>
         {isMenuOpen && (
-          <nav
-            className="flex flex-col basis-full justify-center items-center gap-6 py-5 font-semibold text-lg"
-          >
+          <nav className="flex flex-col basis-full justify-center items-center gap-6 py-5 font-semibold text-lg">
             {links.map((link, index) => {
               return (
                 <a
@@ -78,7 +81,9 @@ function Navbar() {
                 </a>
               );
             })}
-            <a href="#contact">Hire me</a>
+            <Button variant={"outline"} size={"md"} onClick={() => window.location.href = '#contact'}>
+              Hire me
+            </Button>
           </nav>
         )}
       </div>
