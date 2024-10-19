@@ -1,9 +1,9 @@
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-export const Button = ({ children, onClick, variant, size }) => {
+export const Button = ({ children, onClick, variant, size, className }) => {
   const classes = classNames(
-    "inline-flex items-center justify-center whitespace-nowrap rounded-full font-semibold transition-all focus:outline-none",
+    "inline-flex items-center justify-center whitespace-nowrap rounded-full font-semibold transition-all focus:outline-none capitalize",
     {
       "px-4 py-2 text-sm": size === "sm",
       "px-6 py-3 text-md": size === "md",
@@ -13,7 +13,9 @@ export const Button = ({ children, onClick, variant, size }) => {
         variant === "secondary",
       "border border-slate-200 hover:bg-slate-100 hover:text-slate-900":
         variant === "outline",
-    }
+      "rounded-none border-b-2 hover:border-teal-400 hover:text-teal-400" : variant === "underline",
+    },
+    className
   );
 
   return (
@@ -26,6 +28,7 @@ export const Button = ({ children, onClick, variant, size }) => {
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
-  variant: PropTypes.oneOf(["primary", "secondary", "outline"]),
+  variant: PropTypes.oneOf(["primary", "secondary", "outline", "underline"]),
   size: PropTypes.oneOf(["sm", "md", "lg"]),
+  className: PropTypes.string,
 };
