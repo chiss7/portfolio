@@ -43,7 +43,7 @@ function Navbar() {
                 <a
                   href={link.path}
                   key={index}
-                  className="capitalize hover:text-teal-500 transition-all"
+                  className="capitalize hover:text-teal-400 transition-all"
                 >
                   {link.name}
                 </a>
@@ -75,7 +75,7 @@ function Navbar() {
                 <a
                   href={link.path}
                   key={index}
-                  className="capitalize hover:text-teal-500 transition-all"
+                  className="capitalize hover:text-teal-400 transition-all"
                 >
                   {link.name}
                 </a>

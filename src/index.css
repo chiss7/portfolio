@@ -10,7 +10,7 @@
 
 @layer base {
   body {
-    @apply bg-[#202225]
+    @apply bg-gradient-to-bl from-black from-25% via-slate-800 via-70% to-cyan-900 to-100%
   }
   .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;

@@ -27,7 +27,7 @@ export const Home = () => {
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"
-                  iconStyles="w-9 h-9 rounded-full flex justify-center items-center border hover:bg-slate-100 hover:text-slate-900 transition-all"
+                  iconStyles="w-9 h-9 rounded-full flex justify-center items-center border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-800 transition-all"
                 />
               </div>
             </div>
@@ -36,8 +36,6 @@ export const Home = () => {
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
             <Photo />
           </div>
-
-          {/* tech stack */}
         </div>
       </div>
     </section>

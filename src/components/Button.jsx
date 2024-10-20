@@ -8,12 +8,14 @@ export const Button = ({ children, onClick, variant, size, className }) => {
       "px-4 py-2 text-sm": size === "sm",
       "px-6 py-3 text-md": size === "md",
       "px-8 py-4 text-lg": size === "lg",
-      "bg-zinc-800 text-white hover:bg-zinc-800/80": variant === "primary",
+      "bg-teal-400 text-slate-800 hover:bg-teal-500":
+        variant === "primary",
       "bg-slate-100 text-slate-900 hover:bg-slate-100/80":
         variant === "secondary",
-      "border border-slate-200 hover:bg-slate-100 hover:text-slate-900":
+      "border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-800":
         variant === "outline",
-      "rounded-none border-b-2 hover:border-teal-400 hover:text-teal-400" : variant === "underline",
+      "rounded-none border-b-2 hover:border-teal-400 hover:text-teal-400":
+        variant === "underline",
     },
     className
   );
