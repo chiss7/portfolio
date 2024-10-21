@@ -10,10 +10,14 @@ import {
   FaNodeJs,
   FaDocker,
   FaBootstrap,
+  FaGithub,
+  FaGitAlt,
+  FaPython,
 } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiSpringboot, SiTensorflow } from "react-icons/si";
+import { SiIntellijidea, SiPostman, SiSpringboot, SiTensorflow } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 
 export const ME = {
   name: "christopher trujillo",
@@ -24,6 +28,114 @@ export const ME = {
 };
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+
+export const STACK = [
+  {
+    title: "frontend",
+    items: [
+      {
+        name: "HTML",
+        icon: FaHtml5,
+        color: "#FF5722",
+      },
+      {
+        name: "CSS",
+        icon: FaCss3Alt,
+        color: "#2196F3",
+      },
+      {
+        name: "JavasScript",
+        icon: IoLogoJavascript,
+        color: "#F0DC55",
+      },
+      {
+        name: "TailwindCSS",
+        icon: RiTailwindCssFill,
+        color: "#3EBFF8",
+      },
+      {
+        name: "ReactJs",
+        icon: FaReact,
+        color: "#58C4DC",
+      },
+      {
+        name: "AngularJs",
+        icon: FaAngular,
+        color: "#E33236",
+      },
+    ],
+  },
+  {
+    title: "backend",
+    items: [
+      {
+        name: "Java",
+        icon: FaJava,
+        color: "#0E73B8",
+      },
+      {
+        name: "SpringBoot",
+        icon: SiSpringboot,
+        color: "#73B545",
+      },
+      {
+        name: "NodeJs",
+        icon: FaNodeJs,
+        color: "#93C745",
+      },
+    ],
+  },
+  {
+    title: "tools",
+    items: [
+      {
+        name: "Git",
+        icon: FaGitAlt,
+        color: "#F05639",
+      },
+      {
+        name: "GitHub",
+        icon: FaGithub,
+        color: "#000",
+      },
+      {
+        name: "IntelliJ IDEA",
+        icon: SiIntellijidea,
+        color: "#000",
+      },
+      {
+        name: "Vs Code",
+        icon: VscVscode,
+        color: "#087DCE",
+      },
+      {
+        name: "Docker",
+        icon: FaDocker,
+        color: "#19A2DC",
+      },
+      {
+        name: "Postman",
+        icon: SiPostman,
+        color: "#FF713E",
+      },
+    ],
+  },
+  {
+    title: "AI",
+    items: [
+      {
+        name: "Python",
+        icon: FaPython,
+        color: "#417BAC",
+      },
+      {
+        name: "Tensorflow",
+        icon: SiTensorflow,
+        color: "#F78200",
+      },
+    ],
+  },
+];
 
 export const EXPERIENCES = [
   {
@@ -149,8 +261,7 @@ export const PROJECTS = [
     repository: "https://github.com/chiss7/mnist-predictor-react",
     isDeployed: true,
     urlWebsite: "https://chiss7.github.io/mnist-predictor-react/",
-    description:
-      "Number predictor ui using 3 tensorflow models.",
+    description: "Number predictor ui using 3 tensorflow models.",
     technologies: [
       {
         icon: IoLogoJavascript,
