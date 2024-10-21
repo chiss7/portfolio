@@ -1,4 +1,19 @@
 import photo from "../assets/photo.png";
+import project from "../../../Screenshot 2024-10-20 151327.png";
+
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaAngular,
+  FaJava,
+  FaNodeJs,
+  FaDocker,
+  FaBootstrap,
+} from "react-icons/fa6";
+import { IoLogoJavascript } from "react-icons/io5";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiSpringboot, SiTensorflow } from "react-icons/si";
 
 export const ME = {
   name: "christopher trujillo",
@@ -16,59 +31,144 @@ export const EXPERIENCES = [
     role: "Senior Full Stack Developer",
     company: "Google Inc.",
     description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    technologies: [FaHtml5],
   },
   {
     year: "2022 - 2023",
     role: "Frontend Developer",
     company: "Adobe",
     description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
+    technologies: [],
   },
   {
     year: "2021 - 2022",
     role: "Full Stack Developer",
     company: "Facebook",
     description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
+    technologies: [],
   },
   {
     year: "2020 - 2021",
     role: "Software Engineer",
     company: "Paypal",
     description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    technologies: [],
   },
 ];
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
-    image: "project1",
+    title: "E-Commerce Trugarden",
+    category: "fullstack",
+    image: project,
+    repository: "https://github.com/chiss7/trugarden",
+    isDeployed: false,
     description:
       "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+    technologies: [
+      {
+        icon: FaJava,
+        color: "#0E73B8",
+      },
+      {
+        icon: SiSpringboot,
+        color: "#73B545",
+      },
+      {
+        icon: FaAngular,
+        color: "#E33236",
+      },
+      {
+        icon: FaDocker,
+        color: "#19A2DC",
+      },
+    ],
   },
   {
-    title: "Task Management App",
-    image: "project2",
+    title: "Book Social App",
+    category: "fullstack",
+    image: project,
+    repository: "https://github.com/chiss7/book-social-network",
+    isDeployed: false,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+      "An application for managing books, with features such as book creation, borrow book, edit and delete book.",
+    technologies: [
+      {
+        icon: FaJava,
+        color: "#0E73B8",
+      },
+      {
+        icon: SiSpringboot,
+        color: "#73B545",
+      },
+      {
+        icon: FaAngular,
+        color: "#E33236",
+      },
+      {
+        icon: FaDocker,
+        color: "#19A2DC",
+      },
+    ],
   },
   {
-    title: "Portfolio Website",
-    image: "project3",
+    title: "E-Commerce (Microservices)",
+    category: "backend",
+    image: project,
+    repository: "https://github.com/chiss7/ecommerce-microservices-springboot",
+    isDeployed: false,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
+      "E-commerce app that allows customers to browse products, purchase products and send email notifications for order and payment confirmation.",
+    technologies: [
+      {
+        icon: FaHtml5,
+        color: "#FF5722",
+      },
+      {
+        icon: FaBootstrap,
+        color: "#7D10F2",
+      },
+      {
+        icon: FaJava,
+        color: "#0E73B8",
+      },
+      {
+        icon: SiSpringboot,
+        color: "#73B545",
+      },
+      {
+        icon: FaDocker,
+        color: "#19A2DC",
+      },
+    ],
   },
   {
-    title: "Blogging Platform",
-    image: "project4",
+    title: "Number predictor",
+    category: "frontend",
+    image: project,
+    repository: "https://github.com/chiss7/mnist-predictor-react",
+    isDeployed: true,
+    urlWebsite: "https://chiss7.github.io/mnist-predictor-react/",
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+      "Number predictor ui using 3 tensorflow models.",
+    technologies: [
+      {
+        icon: IoLogoJavascript,
+        color: "#F0DC55",
+      },
+      {
+        icon: FaReact,
+        color: "#58C4DC",
+      },
+      {
+        icon: FaCss3Alt,
+        color: "#2196F3",
+      },
+      {
+        icon: SiTensorflow,
+        color: "#F78200",
+      },
+    ],
   },
 ];
 
