@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { BsXLg } from "react-icons/bs";
-import { Button } from "./Button";
+//import { Button } from "./Button";
 
 const links = [
   {
@@ -9,15 +9,15 @@ const links = [
     path: "#",
   },
   {
-    name: "services",
+    name: "stack",
     path: "#services",
   },
   {
-    name: "resume",
+    name: "experience",
     path: "#resume",
   },
   {
-    name: "work",
+    name: "projects",
     path: "#work",
   },
   {
@@ -50,9 +50,9 @@ function Navbar() {
               );
             })}
           </nav>
-          <Button variant={"outline"} size={"md"} onClick={() => window.location.href = '#contact'}>
+          {/* <Button variant={"outline"} size={"md"} onClick={() => window.location.href = '#contact'}>
             Hire me
-          </Button>
+          </Button> */}
         </div>
 
         {/* mobile nav */}
@@ -81,9 +81,9 @@ function Navbar() {
                 </a>
               );
             })}
-            <Button variant={"outline"} size={"md"} onClick={() => window.location.href = '#contact'}>
+            {/* <Button variant={"outline"} size={"md"} onClick={() => window.location.href = '#contact'}>
               Hire me
-            </Button>
+            </Button> */}
           </nav>
         )}
       </div>
