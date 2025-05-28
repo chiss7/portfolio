@@ -1,8 +1,8 @@
 import photo from "../assets/photo.png";
-import project from "../../../Screenshot 2024-10-20 151327.png";
 import mnist_cover from "../assets/mnist-predictor-cover.png";
 import book_social_cover from "../assets/book-social-cover.png";
 import microservices_architecture_cover from "../assets/microservices-architecture.png";
+import under_construction_logo from "../assets/under_construction.svg";
 
 import {
   FaHtml5,
@@ -173,33 +173,6 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Trugarden",
-    category: "fullstack",
-    image: project,
-    repository: "https://github.com/chiss7/trugarden",
-    isDeployed: false,
-    description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: [
-      {
-        icon: FaJava,
-        color: "#0E73B8",
-      },
-      {
-        icon: SiSpringboot,
-        color: "#73B545",
-      },
-      {
-        icon: FaAngular,
-        color: "#E33236",
-      },
-      {
-        icon: FaDocker,
-        color: "#19A2DC",
-      },
-    ],
-  },
-  {
     title: "Book Social App",
     category: "fullstack",
     image: book_social_cover,
@@ -281,6 +254,29 @@ export const PROJECTS = [
       {
         icon: SiTensorflow,
         color: "#F78200",
+      },
+    ],
+  },
+  {
+    title: "Patient Management System (Microservices)",
+    category: "backend",
+    image: under_construction_logo,
+    repository: "https://github.com/chiss7/patient-management-microservices",
+    isDeployed: false,
+    description:
+      "(In progress) A fully functional patient management api with microservices architecture.",
+    technologies: [
+      {
+        icon: FaJava,
+        color: "#0E73B8",
+      },
+      {
+        icon: SiSpringboot,
+        color: "#73B545",
+      },
+      {
+        icon: FaDocker,
+        color: "#19A2DC",
       },
     ],
   },
