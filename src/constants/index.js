@@ -1,5 +1,8 @@
 import photo from "../assets/photo.png";
 import project from "../../../Screenshot 2024-10-20 151327.png";
+import mnist_cover from "../assets/mnist-predictor-cover.png";
+import book_social_cover from "../assets/book-social-cover.png";
+import microservices_architecture_cover from "../assets/microservices-architecture.png";
 
 import {
   FaHtml5,
@@ -199,7 +202,7 @@ export const PROJECTS = [
   {
     title: "Book Social App",
     category: "fullstack",
-    image: project,
+    image: book_social_cover,
     repository: "https://github.com/chiss7/book-social-network",
     isDeployed: false,
     description:
@@ -226,7 +229,7 @@ export const PROJECTS = [
   {
     title: "E-Commerce (Microservices)",
     category: "backend",
-    image: project,
+    image: microservices_architecture_cover,
     repository: "https://github.com/chiss7/ecommerce-microservices-springboot",
     isDeployed: false,
     description:
@@ -257,7 +260,7 @@ export const PROJECTS = [
   {
     title: "Number predictor",
     category: "frontend",
-    image: project,
+    image: mnist_cover,
     repository: "https://github.com/chiss7/mnist-predictor-react",
     isDeployed: true,
     urlWebsite: "https://chiss7.github.io/mnist-predictor-react/",
