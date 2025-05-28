@@ -5,6 +5,15 @@ import { ME } from "../constants";
 import { FiDownload } from "react-icons/fi";
 
 export const Home = () => {
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "../assets/CV_Christopher_Trujillo.pdf";
+    link.download = "CV_Christopher_Trujillo.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   return (
     <section className="h-full text-white">
       <div className="container mx-auto h-full">
@@ -19,7 +28,7 @@ export const Home = () => {
             <p className="max-w-screen-sm mb-9 text-white/80">{ME.about}</p>
             {/* btns and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button variant={"primary"} size="md">
+              <Button variant={"primary"} size="md" onClick={handleDownloadCV}>
                 Download CV&nbsp;
                 <FiDownload className="text-xl" />
               </Button>
