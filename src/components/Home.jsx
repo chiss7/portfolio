@@ -15,7 +15,7 @@ export const Home = () => {
   }
 
   return (
-    <section className="h-full text-white">
+    <section className="h-full text-white" id="#home">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row justify-between items-center xl:pt-8 xl:pb-24">
           {/* text */}

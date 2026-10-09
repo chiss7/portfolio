@@ -6,19 +6,19 @@ import { BsXLg } from "react-icons/bs";
 const links = [
   {
     name: "home",
-    path: "#",
+    path: "#home",
   },
   {
     name: "stack",
-    path: "#services",
+    path: "#stack",
   },
   {
     name: "experience",
-    path: "#resume",
+    path: "#experience",
   },
   {
     name: "projects",
-    path: "#work",
+    path: "#projects",
   },
   {
     name: "contact",
@@ -28,6 +28,14 @@ const links = [
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleScroll = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setIsMenuOpen(false);
+    }
+  }
 
   return (
     <header className="py-8 xl:py-12 text-white">
@@ -44,6 +52,7 @@ function Navbar() {
                   href={link.path}
                   key={index}
                   className="capitalize hover:text-teal-400 transition-all"
+                  onClick={() => handleScroll(link.path)}
                 >
                   {link.name}
                 </a>
@@ -76,6 +85,7 @@ function Navbar() {
                   href={link.path}
                   key={index}
                   className="capitalize hover:text-teal-400 transition-all"
+                  onClick={() => handleScroll(link.path)}
                 >
                   {link.name}
                 </a>

@@ -9,7 +9,7 @@ export const Stack = () => {
   const category = STACK[value];
 
   return (
-    <section className="h-full text-white pb-12 xl:pb-0">
+    <section className="h-full text-white pb-12 xl:pb-0" id="stack">
       <div className="container mx-auto h-full xl:pt-8 xl:pb-16">
         <h2 className="h2 text-center">Tech Stack</h2>
         <div className="flex justify-center py-6">
